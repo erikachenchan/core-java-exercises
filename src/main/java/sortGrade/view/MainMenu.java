@@ -59,11 +59,12 @@ public class MainMenu {
     }
 
     private void printMainMenu() {
-        System.out.println("1: Enter record");
+        System.out.println("1: Enter Record");
         System.out.println("2: Sort Record");
+        System.out.println("3: Exit program");
     }
 
     public void printExitMessage() {
-        System.out.println("Exiting..");
+        System.out.println("Exiting....");
     }
 }
