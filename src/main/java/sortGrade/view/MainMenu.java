@@ -44,7 +44,7 @@ public class MainMenu {
 //                    sortStudents();
                     break;
                 case 4:
-                    System.out.println("Exiting...");
+                    printExitMessage();
                     exit = true;
                     break;
                 default:
