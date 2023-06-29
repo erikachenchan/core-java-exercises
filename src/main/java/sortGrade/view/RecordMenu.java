@@ -7,7 +7,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RecordMenu {
+    // * ArrayList to store student records
+    private ArrayList<Student> studentDtoArrayList;
 
+    // * returns the studentDtoArrayList variable, which is an ArrayList containing student records
+    public ArrayList<Student> getStudentDtoArrayList() {
+        return studentDtoArrayList;
+    }
 
     public RecordMenu(Scanner scanner) {
 
@@ -17,7 +23,9 @@ public class RecordMenu {
 
         while (true) {
             try {
-                ArrayList<Student> studentDtoArrayList = new ArrayList<>();
+                // * Initialize the studentDtoArrayList as a new ArrayList
+                studentDtoArrayList = new ArrayList<>();
+
                 System.out.println("Enter name: ");
                 userNameInput = scanner.nextLine();
                 System.out.println("Enter English score");
@@ -64,4 +72,5 @@ public class RecordMenu {
             break;
         }
     }
+
 }

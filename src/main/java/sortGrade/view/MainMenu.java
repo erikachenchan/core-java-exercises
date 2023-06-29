@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainMenu {
+
+    // * Create Instance Variable
+    private RecordMenu recordMenu;
+    private ArrayList<Student> students;
+
     public MainMenu(Scanner scanner) {
         int usersChoice;
         boolean exit = false;
@@ -28,9 +33,12 @@ public class MainMenu {
                     enterRecord(scanner);
                     break;
                 case 2:
-                    sortRecord();
+                    displayStudents();
                     break;
                 case 3:
+//                    sortStudents();
+                    break;
+                case 4:
                     System.out.println("Exiting...");
                     exit = true;
                     break;
@@ -42,26 +50,34 @@ public class MainMenu {
 
     }
 
-    public void sortRecord() {
+    public void displayStudents() {
         System.out.println("List of students");
-        ArrayList<Student> students = new ArrayList<>();
-        for (Student student : students) {
-            System.out.println("Name" + student.getName());
-            System.out.println("Overall grade: " + student.calculateGrade());
+
+        // * Retrieve student record from RecordMenu.java and display them
+        students = recordMenu.getStudentDtoArrayList();
+
+        if (students == null) {
+            System.out.println("No Student Found");
+        } else {
+            for (Student student : students) {
+                System.out.println("=== Student details ===");
+                System.out.println("Name: " + student.getName());
+                System.out.println("Overall grade: " + student.calculateGrade());
+                System.out.println();
+            }
         }
-        System.out.println("test...");
-        System.out.println(students); // test
     }
 
     private void enterRecord(Scanner scanner) {
-        RecordMenu recordMenu = new RecordMenu(scanner);
-
+        recordMenu = new RecordMenu(scanner);
     }
 
     private void printMainMenu() {
         System.out.println("1: Enter Record");
-        System.out.println("2: Sort Record");
-        System.out.println("3: Exit program");
+        System.out.println("2: Display Record");
+        System.out.println("3: Sort Record");
+        System.out.println("4: Exit program");
+
     }
 
     public void printExitMessage() {
