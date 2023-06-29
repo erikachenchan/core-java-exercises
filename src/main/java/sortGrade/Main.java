@@ -1,9 +1,10 @@
 package sortGrade;
 
 
-import sortGrade.view.MainMenu;
 
 import java.util.Scanner;
+
+import sortGrade.view.MainMenu;
 
 public class Main {
 
