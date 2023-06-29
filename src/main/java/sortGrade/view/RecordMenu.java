@@ -34,13 +34,13 @@ public class RecordMenu {
                 System.out.println("Enter Maths score");
                 mathGradeInput = Integer.parseInt(scanner.nextLine());
 
-                System.out.println("Enter Science  score");
+                System.out.println("Enter Science score");
                 scienceGradeInput = Integer.parseInt(scanner.nextLine());
 
                 System.out.println("Enter Filipino score");
                 filipinoGradeInput = Integer.parseInt(scanner.nextLine());
 
-                System.out.println("Enter Mapeh score");
+                System.out.println("Enter MAPEH score");
                 mapehGradeInput = Integer.parseInt(scanner.nextLine());
 
 
