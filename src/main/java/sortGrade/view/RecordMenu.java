@@ -7,20 +7,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RecordMenu {
-    // * ArrayList to store student records
+    // instantiate with an empty arrayList
     private final ArrayList<Student> studentDtoArrayList = new ArrayList<>();
     private final Scanner scanner;
 
-    // * returns the studentDtoArrayList variable, which is an ArrayList containing student records
+    // returns the studentDtoArrayList variable, which is an ArrayList containing student records */
     public ArrayList<Student> getStudentDtoArrayList() {
         return studentDtoArrayList;
     }
 
+    // RecordMenu constructor to create scanner as constructor parameter to instantiate
+    // the instance variable of recordMenu scanner.
     public RecordMenu(Scanner scanner) {
         this.scanner = scanner;
     }
 
-    public void openRecordMenu(){
+    public void openRecordMenu() {
         String userNameInput;
         double englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput;
         double calculateGrade;
@@ -30,6 +32,7 @@ public class RecordMenu {
                 // * Initialize the studentDtoArrayList as a new ArrayList
 
                 System.out.println("Enter name: ");
+                // this.scanner
                 userNameInput = this.scanner.nextLine();
                 System.out.println("Enter English score");
                 englishGradeInput = Integer.parseInt(scanner.nextLine());
@@ -54,12 +57,11 @@ public class RecordMenu {
                     break;
                 }
 
+                // add new objects to studentDtoArraylist
                 studentDtoArrayList.add(new Student(userNameInput, englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput));
 
-                //Calculate grade
                 calculateGrade = englishGradeInput + mathGradeInput + scienceGradeInput + filipinoGradeInput + mapehGradeInput;
 
-                // average
                 double averageGrade = (calculateGrade / 5);
                 System.out.println(userNameInput + " overall grade is " + averageGrade);
 

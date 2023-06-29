@@ -7,7 +7,11 @@ import java.util.Scanner;
 
 public class MainMenu {
 
-    // * Create Instance Variable
+    /** Create Instance Variable for main menu,
+     * this means it has one recordMenu instance
+     * you can retain all the attributes from that recordmenu
+     * instance with a single object instance.
+     */
     private RecordMenu recordMenu = new RecordMenu(new Scanner(System.in));
     private ArrayList<Student> students;
 
@@ -53,7 +57,7 @@ public class MainMenu {
     public void displayStudents() {
         System.out.println("List of students");
 
-        // * Retrieve student record from RecordMenu.java and display them
+        // Retrieve student record from RecordMenu.java and display them
         students = recordMenu.getStudentDtoArrayList();
 
         if (students == null) {
