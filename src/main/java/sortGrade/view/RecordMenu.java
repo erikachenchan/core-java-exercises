@@ -15,11 +15,11 @@ public class RecordMenu {
         return studentDtoArrayList;
     }
 
-    public RecordMenu(Scanner scanner) {
+    String userNameInput;
+    double englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput;
+    double calculateGrade;
 
-        String userNameInput;
-        double englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput;
-        double calculateGrade;
+    public void addRecord(Scanner scanner) {
 
         while (true) {
             try {
@@ -40,7 +40,7 @@ public class RecordMenu {
                 System.out.println("Enter Filipino score");
                 filipinoGradeInput = Integer.parseInt(scanner.nextLine());
 
-                System.out.println("Enter MAPEH score");
+                System.out.println("Enter Mapeh score");
                 mapehGradeInput = Integer.parseInt(scanner.nextLine());
 
 
@@ -61,7 +61,7 @@ public class RecordMenu {
                 System.out.println(userNameInput + " overall grade is " + averageGrade);
 
                 if (averageGrade < 50) {
-                    System.out.println(userNameInput + "failed all the modules");
+                    System.out.println(userNameInput + " failed all the modules");
                 } else {
                     System.out.println(userNameInput + " passed all the modules");
                 }
@@ -72,5 +72,4 @@ public class RecordMenu {
             break;
         }
     }
-
 }

@@ -11,9 +11,14 @@ public class MainMenu {
     private RecordMenu recordMenu;
     private ArrayList<Student> students;
 
+    //Main Menu constructor
     public MainMenu(Scanner scanner) {
+
         int usersChoice;
         boolean exit = false;
+
+        recordMenu = new RecordMenu();
+
         while (!exit) {
             printMainMenu();
             System.out.println("Please enter your choice: ");
@@ -69,7 +74,7 @@ public class MainMenu {
     }
 
     private void enterRecord(Scanner scanner) {
-        recordMenu = new RecordMenu(scanner);
+        recordMenu.addRecord(scanner);
     }
 
     private void printMainMenu() {
