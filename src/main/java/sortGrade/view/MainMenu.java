@@ -8,17 +8,12 @@ import java.util.Scanner;
 public class MainMenu {
 
     // * Create Instance Variable
-    private RecordMenu recordMenu;
+    private RecordMenu recordMenu = new RecordMenu(new Scanner(System.in));
     private ArrayList<Student> students;
 
-    //Main Menu constructor
     public MainMenu(Scanner scanner) {
-
         int usersChoice;
         boolean exit = false;
-
-        recordMenu = new RecordMenu();
-
         while (!exit) {
             printMainMenu();
             System.out.println("Please enter your choice: ");
@@ -35,7 +30,7 @@ public class MainMenu {
             }
             switch (usersChoice) {
                 case 1:
-                    enterRecord(scanner);
+                    recordMenu.openRecordMenu();
                     break;
                 case 2:
                     displayStudents();
@@ -44,7 +39,7 @@ public class MainMenu {
 //                    sortStudents();
                     break;
                 case 4:
-                    printExitMessage();
+                    System.out.println("Exiting...");
                     exit = true;
                     break;
                 default:
@@ -73,9 +68,6 @@ public class MainMenu {
         }
     }
 
-    private void enterRecord(Scanner scanner) {
-        recordMenu.addRecord(scanner);
-    }
 
     private void printMainMenu() {
         System.out.println("1: Enter Record");
