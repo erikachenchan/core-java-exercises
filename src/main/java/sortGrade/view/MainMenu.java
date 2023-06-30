@@ -44,7 +44,6 @@ public class MainMenu {
 //                    sortStudents();
                     break;
                 case 4:
-                    System.out.println("Exiting...");
                     exit = true;
                     break;
                 default:
@@ -83,6 +82,6 @@ public class MainMenu {
     }
 
     public void printExitMessage() {
-        System.out.println("Exiting....");
+        System.out.println("Exiting..");
     }
 }

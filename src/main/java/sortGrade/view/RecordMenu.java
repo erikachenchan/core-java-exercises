@@ -10,7 +10,6 @@ public class RecordMenu {
 
     String userNameInput;
     double englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput;
-    double calculateGrade;
 
     // instantiate with an empty arrayList
     private final ArrayList<Student> studentDtoArrayList = new ArrayList<>();
@@ -59,11 +58,10 @@ public class RecordMenu {
                 // add new objects to studentDtoArraylist
                 studentDtoArrayList.add(new Student(userNameInput, englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput));
 
-                calculateGrade = englishGradeInput + mathGradeInput + scienceGradeInput + filipinoGradeInput + mapehGradeInput;
-
+                double calculateGrade = englishGradeInput + mathGradeInput + scienceGradeInput + filipinoGradeInput + mapehGradeInput;
                 double averageGrade = (calculateGrade / 5);
-                System.out.println(userNameInput + " overall grade is " + averageGrade);
 
+                System.out.println(userNameInput + " overall grade is " + averageGrade);
                 if (averageGrade < 50) {
                     System.out.println(userNameInput + " failed all the modules");
                 } else {
