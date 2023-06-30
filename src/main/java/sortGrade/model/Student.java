@@ -42,6 +42,30 @@ public class Student {
         return mapehGrade;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEnglishGrade(double englishGrade) {
+        this.englishGrade = englishGrade;
+    }
+
+    public void setMathGrade(double mathGrade) {
+        this.mathGrade = mathGrade;
+    }
+
+    public void setScienceGrade(double scienceGrade) {
+        this.scienceGrade = scienceGrade;
+    }
+
+    public void setFilipinoGrade(double filipinoGrade) {
+        this.filipinoGrade = filipinoGrade;
+    }
+
+    public void setMapehGrade(double mapehGrade) {
+        this.mapehGrade = mapehGrade;
+    }
+
     public double calculateGrade() {
         double sum = (getEnglishGrade() + getMathGrade() + getScienceGrade() + getFilipinoGrade() + getMapehGrade());
         double calculateGradeAvg = sum / 5;
