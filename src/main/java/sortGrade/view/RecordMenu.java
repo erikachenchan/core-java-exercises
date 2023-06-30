@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RecordMenu {
+
+    String userNameInput;
+    double englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput;
+    double calculateGrade;
+
     // instantiate with an empty arrayList
     private final ArrayList<Student> studentDtoArrayList = new ArrayList<>();
     private final Scanner scanner;
@@ -23,9 +28,6 @@ public class RecordMenu {
     }
 
     public void openRecordMenu() {
-        String userNameInput;
-        double englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput;
-        double calculateGrade;
 
         while (true) {
             try {
