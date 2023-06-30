@@ -41,7 +41,7 @@ public class MainMenu {
                     displayStudents();
                     break;
                 case 3:
-//                    sortStudents();
+//                    editRecord();
                     break;
                 case 4:
                     exit = true;
