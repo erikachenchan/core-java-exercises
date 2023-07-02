@@ -1,7 +1,7 @@
-package sortGrade.view;
+package sortgrade.view;
 
 
-import sortGrade.model.Student;
+import sortgrade.model.Student;
 
 import java.util.ArrayList;
 import java.util.Scanner;

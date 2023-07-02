@@ -1,4 +1,4 @@
-package sortGrade.model;
+package sortgrade.model;
 
 public class Student {
 

@@ -1,4 +1,4 @@
-package sortGrade.view;
+package sortgrade.view;
 
 public class EditRecordMenu {
 //    private RecordMenu recordMenu = new RecordMenu(new Scanner(System.in));
