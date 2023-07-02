@@ -2,20 +2,23 @@ package sortGrade.model;
 
 public class Student {
 
+    private int userId;
     private String name;
     private double englishGrade;
     private double mathGrade;
     private double scienceGrade;
-    private double filipinoGrade;
-    private double mapehGrade;
 
-    public Student(String name, double englishGrade, double mathGrade, double scienceGrade, double filipinoGrade, double mapehGrade) {
+    public Student(int userId, String name, double englishGrade, double mathGrade, double scienceGrade) {
+        this.userId = userId;
         this.name = name;
         this.englishGrade = englishGrade;
         this.mathGrade = mathGrade;
         this.scienceGrade = scienceGrade;
-        this.filipinoGrade = filipinoGrade;
-        this.mapehGrade = mapehGrade;
+
+    }
+
+    public int getUserId() {
+        return userId;
     }
 
     public String getName() {
@@ -34,12 +37,8 @@ public class Student {
         return scienceGrade;
     }
 
-    public double getFilipinoGrade() {
-        return filipinoGrade;
-    }
-
-    public double getMapehGrade() {
-        return mapehGrade;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public void setName(String name) {
@@ -58,31 +57,21 @@ public class Student {
         this.scienceGrade = scienceGrade;
     }
 
-    public void setFilipinoGrade(double filipinoGrade) {
-        this.filipinoGrade = filipinoGrade;
-    }
-
-    public void setMapehGrade(double mapehGrade) {
-        this.mapehGrade = mapehGrade;
-    }
 
     public double calculateGrade() {
-        double sum = (getEnglishGrade() + getMathGrade() + getScienceGrade() + getFilipinoGrade() + getMapehGrade());
-        double calculateGradeAvg = sum / 5;
+        double sum = (getEnglishGrade() + getMathGrade() + getScienceGrade());
+        double calculateGradeAvg = sum / 3;
         return calculateGradeAvg;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
+                "userId=" + userId +
+                ", name='" + name + '\'' +
                 ", englishGrade=" + englishGrade +
                 ", mathGrade=" + mathGrade +
                 ", scienceGrade=" + scienceGrade +
-                ", filipinoGrade=" + filipinoGrade +
-                ", mapehGrade=" + mapehGrade +
                 '}';
     }
-
-
 }

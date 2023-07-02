@@ -14,6 +14,8 @@ public class MainMenu {
      * instance with a single object instance.
      */
     private RecordMenu recordMenu = new RecordMenu(new Scanner(System.in));
+
+//    private EditRecordMenu editRecordMenu = new EditRecordMenu(new Scanner(System.in));
     private ArrayList<Student> students;
 
     public MainMenu(Scanner scanner) {
@@ -41,7 +43,7 @@ public class MainMenu {
                     displayStudents();
                     break;
                 case 3:
-//                    editRecord();
+//                    editRecordMenu.editStudentRecord();
                     break;
                 case 4:
                     exit = true;

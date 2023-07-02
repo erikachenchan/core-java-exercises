@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class RecordMenu {
 
+    int userId;
     String userNameInput;
     double englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput;
 
@@ -31,6 +32,8 @@ public class RecordMenu {
         while (true) {
             try {
                 // * Initialize the studentDtoArrayList as a new ArrayList
+                System.out.println("Enter student id");
+                userId = Integer.parseInt(scanner.nextLine());
                 System.out.println("Enter name: ");
                 userNameInput = this.scanner.nextLine();
                 System.out.println("Enter English score: ");
@@ -42,24 +45,22 @@ public class RecordMenu {
                 System.out.println("Enter Science score: ");
                 scienceGradeInput = Integer.parseInt(scanner.nextLine());
 
-                System.out.println("Enter Filipino score: ");
-                filipinoGradeInput = Integer.parseInt(scanner.nextLine());
 
-                System.out.println("Enter MAPEH score: ");
-                mapehGradeInput = Integer.parseInt(scanner.nextLine());
-
+                if (userId == 0) {
+                    break;
+                }
                 if (userNameInput.equals("")) {
                     break;
                 }
-                if (englishGradeInput == 0 || mathGradeInput == 0 || scienceGradeInput == 0 || filipinoGradeInput == 0 || mapehGradeInput == 0) {
+                if (englishGradeInput == 0 || mathGradeInput == 0 || scienceGradeInput == 0) {
                     break;
                 }
 
                 // add new objects to studentDtoArraylist
-                studentDtoArrayList.add(new Student(userNameInput, englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput));
+                studentDtoArrayList.add(new Student(userId, userNameInput, englishGradeInput, mathGradeInput, scienceGradeInput));
 
-                double calculateGrade = englishGradeInput + mathGradeInput + scienceGradeInput + filipinoGradeInput + mapehGradeInput;
-                double averageGrade = (calculateGrade / 5);
+                double calculateGrade = englishGradeInput + mathGradeInput + scienceGradeInput;
+                double averageGrade = (calculateGrade / 3);
 
                 System.out.println(userNameInput + " overall grade is " + averageGrade);
                 if (averageGrade < 50) {

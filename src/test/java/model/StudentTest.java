@@ -12,23 +12,20 @@ public class StudentTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        student = new Student("erika", 60, 59, 95, 23, 95);
+        student = new Student(1, "erika", 60, 59, 95);
+        student.setUserId(1);
         student.setName("jeff");
         student.setEnglishGrade(50);
         student.setMathGrade(50);
         student.setScienceGrade(50);
-        student.setFilipinoGrade(50);
-        student.setMapehGrade(50);
-
     }
 
     @Test
     void getUserObject() throws Exception {
+        assertEquals(1, student.getUserId());
         assertEquals("jeff", student.getName());
         assertEquals(50.0, student.getEnglishGrade());
         assertEquals(50.0, student.getMathGrade());
         assertEquals(50.0, student.getScienceGrade());
-        assertEquals(50.0, student.getFilipinoGrade());
-        assertEquals(50.0, student.getMapehGrade());
     }
 }
