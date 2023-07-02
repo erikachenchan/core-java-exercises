@@ -10,7 +10,9 @@ public class RecordMenu {
 
     int userId;
     String userNameInput;
-    double englishGradeInput, mathGradeInput, scienceGradeInput, filipinoGradeInput, mapehGradeInput;
+    double englishGradeInput;
+    double mathGradeInput;
+    double scienceGradeInput;
 
     // instantiate with an empty arrayList
     private final ArrayList<Student> studentDtoArrayList = new ArrayList<>();
