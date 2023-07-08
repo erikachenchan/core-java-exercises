@@ -18,7 +18,7 @@ public class RecordMenu {
     private final ArrayList<Student> studentDtoArrayList = new ArrayList<>();
     private final Scanner scanner;
 
-    // returns the studentDtoArrayList variable, which is an ArrayList containing student records */
+    // getter - returns the studentDtoArrayList variable, which is an ArrayList containing student records */
     public ArrayList<Student> getStudentDtoArrayList() {
         return studentDtoArrayList;
     }
@@ -26,6 +26,7 @@ public class RecordMenu {
     // RecordMenu constructor to create scanner as constructor parameter to instantiate
     // the instance variable of recordMenu scanner.
     public RecordMenu(Scanner scanner) {
+        //this.scanner is from recordMenu
         this.scanner = scanner;
     }
 
