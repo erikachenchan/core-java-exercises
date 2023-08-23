@@ -15,7 +15,7 @@ public class MainMenu {
      */
     private RecordMenu recordMenu = new RecordMenu(new Scanner(System.in));
 
-//    private EditRecordMenu editRecordMenu = new EditRecordMenu(new Scanner(System.in));
+    private EditRecordMenu editRecordMenu = new EditRecordMenu(new Scanner(System.in));
     private ArrayList<Student> students;
 
     public MainMenu(Scanner scanner) {
@@ -43,7 +43,7 @@ public class MainMenu {
                     displayStudents();
                     break;
                 case 3:
-//                    editRecordMenu.editStudentRecord();
+                    editRecordMenu.editStudentRecord();
                     break;
                 case 4:
                     exit = true;
@@ -75,10 +75,11 @@ public class MainMenu {
     }
 
 
+
     private void printMainMenu() {
         System.out.println("1: Enter Record");
         System.out.println("2: Display Record");
-        System.out.println("3: Sort Record");
+        System.out.println("3: Edit Record");
         System.out.println("4: Exit program");
 
     }
