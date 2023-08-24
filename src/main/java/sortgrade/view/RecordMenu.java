@@ -37,17 +37,18 @@ public class RecordMenu {
                 // * Initialize the studentDtoArrayList as a new ArrayList
                 System.out.println("Enter student id");
                 userId = Integer.parseInt(scanner.nextLine());
+
                 System.out.println("Enter name: ");
-                userNameInput = this.scanner.nextLine();
+                userNameInput = scanner.nextLine();
+
                 System.out.println("Enter English score: ");
-                englishGradeInput = Integer.parseInt(scanner.nextLine());
+                englishGradeInput = Double.parseDouble(scanner.nextLine());
 
                 System.out.println("Enter Maths score: ");
-                mathGradeInput = Integer.parseInt(scanner.nextLine());
+                mathGradeInput = Double.parseDouble(scanner.nextLine());
 
                 System.out.println("Enter Science score: ");
-                scienceGradeInput = Integer.parseInt(scanner.nextLine());
-
+                scienceGradeInput = Double.parseDouble(scanner.nextLine());
 
                 if (userId == 0) {
                     break;
