@@ -67,13 +67,13 @@ public class MainMenu {
         } else {
             for (Student student : students) {
                 System.out.println("=== " + student.getName() + " grade details ===");
+                System.out.println("ID: " + student.getUserId());
                 System.out.println("Name: " + student.getName());
                 System.out.println("Overall grade: " + student.calculateGrade());
                 System.out.println();
             }
         }
     }
-
 
 
     private void printMainMenu() {
