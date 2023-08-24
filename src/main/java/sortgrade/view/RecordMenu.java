@@ -16,6 +16,7 @@ public class RecordMenu {
 
     // instantiate with an empty arrayList
     private final ArrayList<Student> studentDtoArrayList = new ArrayList<>();
+    private Student student;
     private final Scanner scanner;
 
     // getter - returns the studentDtoArrayList variable, which is an ArrayList containing student records */
@@ -63,15 +64,17 @@ public class RecordMenu {
                 // add new objects to studentDtoArraylist
                 studentDtoArrayList.add(new Student(userId, userNameInput, englishGradeInput, mathGradeInput, scienceGradeInput));
 
-                for (Student s : studentDtoArrayList) {
-                    System.out.println(userNameInput + " overall NEW grade is " + s.calculateGrade());
-                    if (s.calculateGrade() < 50) {
-                        System.out.println(userNameInput + " failed all the modules");
-                    } else {
-                        System.out.println(userNameInput + " passed all the modules");
-                    }
-                }
+                double calculateGrade = englishGradeInput + mathGradeInput + scienceGradeInput;
+                double averageGrade = (calculateGrade / 3);
 
+                System.out.println(userNameInput + " overall grade is " + averageGrade);
+
+                if (averageGrade < 50) {
+                    System.out.println(userNameInput + " failed all the modules");
+                } else {
+                    System.out.println(userNameInput + " passed all the modules");
+                }
+                System.out.println("");
             } catch (Exception e) {
                 System.out.println("try again!");
             }
